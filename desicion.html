@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decision Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Decision Helper</h1>
+    <p>Break down your decision and get clarity.</p>
+
+    <div class="card">
+        <label>What is your decision?</label><br>
+        <input type="text" id="decision" placeholder="e.g. Should I change my job?">
+
+        <label>Option A</label><br>
+        <input type="text" id="optionA" placeholder="Option A">
+
+        <label>Option B</label><br>
+        <input type="text" id="optionB" placeholder="Option B">
+
+        <label>Which option feels better?</label><br>
+        <select id="feeling">
+            <option value="A">Option A</option>
+            <option value="B">Option B</option>
+        </select>
+
+        <br><br>
+        <button onclick="getDecision()">Get Clarity</button>
+
+        <h3 id="result"></h3>
+    </div>
+
+    <script src="decision.js"></script>
+
+</body>
+</html>
