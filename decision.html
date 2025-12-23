@@ -5,27 +5,38 @@
   <title>Decision Helper | Life Navigator</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+  <body class="dark">
 
-  <h1>Decision Helper</h1>
-  <p>Break down your decision clearly and calmly.</p>
+  <div class="decision-container">
 
-  <label>What decision are you trying to make?</label><br><br>
-  <input type="text" id="decision" placeholder="e.g. Should I switch my job?" style="width:60%; padding:10px;"><br><br>
+    <h1 class="title">Decision Helper</h1>
+    <p class="subtitle">
+      Let’s break this down calmly and clearly.
+    </p>
 
-  <label>Option A</label><br>
-  <input type="text" id="optionA" placeholder="Option A"><br><br>
+    <!-- Step 1 -->
+    <div class="card">
+      <label>What decision are you trying to make?</label>
+      <input type="text" placeholder="e.g. Should I change my job?" />
+    </div>
 
-  <label>Option B</label><br>
-  <input type="text" id="optionB" placeholder="Option B"><br><br>
+    <!-- Step 2 -->
+    <div class="card">
+      <label>Option A</label>
+      <input type="text" placeholder="Describe option A" />
+    </div>
 
-  <button onclick="analyzeDecision()">Analyze</button>
+    <!-- Step 3 -->
+    <div class="card">
+      <label>Option B</label>
+      <input type="text" placeholder="Describe option B" />
+    </div>
 
-  <h3 id="result"></h3>
+    <button class="primary-btn">
+      Help me decide →
+    </button>
 
-  <br><br>
-  <a href="index.html">⬅ Back to Home</a>
+  </div>
 
-  <script src="decision.js"></script>
 </body>
 </html>
