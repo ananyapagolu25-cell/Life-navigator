@@ -1,65 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Decision Helper</title>
+  <meta charset="UTF-8">
+  <title>Decision Helper | Life Navigator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #0f1117;
+      color: #e5e7eb;
+      font-family: system-ui, sans-serif;
+    }
 
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="decision.css">
+    .container {
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #9ca3af;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 25px;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      background: #1f2933;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 35px;
+      width: 100%;
+      padding: 16px;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 40px;
+      padding: 20px;
+      border-radius: 12px;
+      background: #111827;
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
+  <div class="container">
+    <h1>Decision Helper</h1>
+    <p>Slow down. Let’s think clearly, one step at a time.</p>
 
-        <h1>Decision Helper</h1>
-        <p class="subtitle">
-            Think clearly. Decide calmly.
-        </p>
+    <label>What decision are you trying to make?</label>
+    <input id="decision" placeholder="e.g. Should I change my job?">
 
-        <!-- Decision Question -->
-        <div class="section">
-            <label>What decision are you trying to make?</label>
-            <textarea id="decisionText" placeholder="Example: Should I change my job?"></textarea>
-        </div>
+    <label>Option A</label>
+    <input id="optionA" placeholder="e.g. Stay in current job">
 
-        <!-- Options -->
-        <div class="section options">
-            <div>
-                <label>Option A</label>
-                <input type="text" id="optionA" placeholder="Example: Stay in current job">
-            </div>
+    <label>Option B</label>
+    <input id="optionB" placeholder="e.g. Switch to new company">
 
-            <div>
-                <label>Option B</label>
-                <input type="text" id="optionB" placeholder="Example: Switch to new job">
-            </div>
-        </div>
+    <button onclick="analyzeDecision()">Help me decide</button>
 
-        <!-- Priorities -->
-        <div class="section">
-            <label>What matters most to you?</label>
+    <div class="result" id="resultBox"></div>
+  </div>
 
-            <div class="checkbox-group">
-                <label><input type="checkbox" value="money"> Money</label>
-                <label><input type="checkbox" value="peace"> Peace</label>
-                <label><input type="checkbox" value="growth"> Growth</label>
-                <label><input type="checkbox" value="health"> Health</label>
-                <label><input type="checkbox" value="family"> Family</label>
-            </div>
-        </div>
-
-        <!-- Button -->
-        <button id="analyzeBtn">
-            Help me decide
-        </button>
-
-        <!-- Result -->
-        <div id="result" class="result-box"></div>
-
-    </div>
-
-    <!-- Link JS -->
-    <script src="decision.js"></script>
-
+  <script src="decision.js"></script>
 </body>
 </html>
