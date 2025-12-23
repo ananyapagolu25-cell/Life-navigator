@@ -2,59 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Decision Helper</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Decision Helper | Life Navigator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        input, textarea, button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        button {
+            background: #4a90e2;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
     <h1>Decision Helper</h1>
-    <p>Break down your decision and get clarity.</p>
 
-    <div class="card">
-        <label>What is your decision?</label><br>
-        <input type="text" id="decision" placeholder="e.g. Should I change my job?">
+    <div class="box">
+        <label>What decision are you trying to make?</label>
+        <textarea placeholder="Example: Should I change my job?"></textarea>
 
-        <label>Option A</label><br>
-        <input type="text" id="optionA" placeholder="Option A">
+        <label>Option A</label>
+        <input type="text" placeholder="Example: Stay in current job">
 
-        <label>Option B</label><br>
-        <input type="text" id="optionB" placeholder="Option B">
+        <label>Option B</label>
+        <input type="text" placeholder="Example: Switch to new company">
 
-        <label>Which option feels better?</label><br>
-        <select id="feeling">
-            <option value="A">Option A</option>
-            <option value="B">Option B</option>
-        </select>
-
-        <br><br>
-        <button onclick="getDecision()">Get Clarity</button>
-
-        <h3 id="result"></h3>
+        <button>Analyze Decision</button>
     </div>
-
-    <script src="decision.js"></script>
-    <section id="decision-helper">
-  <h2>Decision Helper</h2>
-
-  <label>What decision are you trying to make?</label><br>
-  <input type="text" id="decision" placeholder="Eg: Should I change my job?" />
-
-  <br><br>
-
-  <label>Option A</label><br>
-  <input type="text" id="optionA" placeholder="Option A" />
-
-  <br><br>
-
-  <label>Option B</label><br>
-  <input type="text" id="optionB" placeholder="Option B" />
-
-  <br><br>
-
-  <button onclick="analyzeDecision()">Analyze Decision</button>
-
-  <h3 id="result"></h3>
-</section>
 
 </body>
 </html>
