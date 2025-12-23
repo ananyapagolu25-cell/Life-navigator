@@ -66,28 +66,44 @@
     }
   </style>
 </head>
-<body>
+<body class="dark">
 
-  <div class="container">
+  <div class="decision-container">
     <h1>Decision Helper</h1>
-    <p>Slow down. Let’s think clearly, one step at a time.</p>
+    <p class="subtitle">Think clearly. Decide calmly.</p>
 
-    <label>What decision are you trying to make?</label>
-    <input id="decision" placeholder="e.g. Should I change my job?">
+    <!-- Step 1 -->
+    <div class="card">
+      <label>Your decision</label>
+      <input type="text" id="decision" placeholder="e.g. Should I change my job?">
+    </div>
 
-    <label>Option A</label>
-    <input id="optionA" placeholder="e.g. Stay in current job">
+    <!-- Step 2 -->
+    <div class="card">
+      <label>Option A</label>
+      <input type="text" id="optionA" placeholder="e.g. Stay at current job">
+    </div>
 
-    <label>Option B</label>
-    <input id="optionB" placeholder="e.g. Switch to new company">
+    <div class="card">
+      <label>Option B</label>
+      <input type="text" id="optionB" placeholder="e.g. Switch to new job">
+    </div>
 
-    <button onclick="makeDecision()">Help me decide</button>
+    <!-- Step 3 -->
+    <div class="card">
+      <label>What matters more?</label>
+      <select id="priority">
+        <option value="growth">Growth</option>
+        <option value="peace">Peace</option>
+        <option value="money">Money</option>
+        <option value="balance">Work-Life Balance</option>
+      </select>
+    </div>
 
-    <div class="result" id="resultBox"></div>
-    <div id="resultBox" class="result-box hidden">
-  <h3>Your Decision Insight</h3>
-  <p id="decisionSummary"></p>
-  <p id="clarityScore"></p>
+    <button onclick="analyzeDecision()">Help me decide</button>
+
+    <!-- Result -->
+    <div id="result" class="result-box"></div>
   </div>
 
   <script src="decision.js"></script>
