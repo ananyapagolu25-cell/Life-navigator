@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Decision Helper | Life Navigator</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Decision Helper</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="decision.css">
 </head>
-  <body class="dark">
+<body>
 
-  <div class="decision-container">
+    <div class="container">
 
-    <h1 class="title">Decision Helper</h1>
-    <p class="subtitle">
-      Let’s break this down calmly and clearly.
-    </p>
+        <h1>Decision Helper</h1>
+        <p class="subtitle">
+            Think clearly. Decide calmly.
+        </p>
 
-    <!-- Step 1 -->
-    <div class="card">
-      <label>What decision are you trying to make?</label>
-      <input type="text" placeholder="e.g. Should I change my job?" />
+        <!-- Decision Question -->
+        <div class="section">
+            <label>What decision are you trying to make?</label>
+            <textarea id="decisionText" placeholder="Example: Should I change my job?"></textarea>
+        </div>
+
+        <!-- Options -->
+        <div class="section options">
+            <div>
+                <label>Option A</label>
+                <input type="text" id="optionA" placeholder="Example: Stay in current job">
+            </div>
+
+            <div>
+                <label>Option B</label>
+                <input type="text" id="optionB" placeholder="Example: Switch to new job">
+            </div>
+        </div>
+
+        <!-- Priorities -->
+        <div class="section">
+            <label>What matters most to you?</label>
+
+            <div class="checkbox-group">
+                <label><input type="checkbox" value="money"> Money</label>
+                <label><input type="checkbox" value="peace"> Peace</label>
+                <label><input type="checkbox" value="growth"> Growth</label>
+                <label><input type="checkbox" value="health"> Health</label>
+                <label><input type="checkbox" value="family"> Family</label>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <button id="analyzeBtn">
+            Help me decide
+        </button>
+
+        <!-- Result -->
+        <div id="result" class="result-box"></div>
+
     </div>
 
-    <!-- Step 2 -->
-    <div class="card">
-      <label>Option A</label>
-      <input type="text" placeholder="Describe option A" />
-    </div>
-
-    <!-- Step 3 -->
-    <div class="card">
-      <label>Option B</label>
-      <input type="text" placeholder="Describe option B" />
-    </div>
-
-    <button class="primary-btn">
-      Help me decide →
-    </button>
-
-  </div>
+    <!-- Link JS -->
+    <script src="decision.js"></script>
 
 </body>
 </html>
