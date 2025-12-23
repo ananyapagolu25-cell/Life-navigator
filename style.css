@@ -147,9 +147,80 @@ body.dark {
   border-radius: 12px;
   color: #ffffff;
 }
+body.dark {
+  background: #0f1115;
+  color: #eaeaea;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.decision-container {
+  max-width: 420px;
+  margin: 60px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #1a1d24;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2a2e38;
+  color: white;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #6c8cff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #829cff;
+}
+
+.result-box {
+  margin-top: 25px;
+  padding: 15px;
+  background: #1f2330;
+  border-radius: 12px;
+}
+
+.reason {
+  opacity: 0.8;
+  font-size: 14px;
+}
 
 .hidden {
   display: none;
 }
+
 
 
