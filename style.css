@@ -64,3 +64,80 @@ input, textarea {
 input::placeholder, textarea::placeholder {
   color: #64748b;
 }
+/* ===== DARK MODE BASE ===== */
+body.dark {
+  background: radial-gradient(circle at top, #111827, #020617);
+  color: #e5e7eb;
+  font-family: "Inter", system-ui, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* ===== CENTERED CONTAINER ===== */
+.decision-container {
+  max-width: 520px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+/* ===== HEADINGS ===== */
+.title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 50px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ===== LABEL ===== */
+.card label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+/* ===== INPUT ===== */
+.card input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* ===== BUTTON ===== */
+.primary-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.primary-btn:hover {
+  opacity: 0.9;
+}
+
