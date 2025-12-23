@@ -1,85 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Decision Helper | Life Navigator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6fb;
-            padding: 40px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .box {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-        }
-        input, textarea, button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-        }
-        button {
-            background: #4a6cf7;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        #result {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        a {
-            display: block;
-            margin-top: 20px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Decision Helper | Life Navigator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Decision Helper</h1>
+  <h1>Decision Helper</h1>
+  <p>Break down your decision clearly and calmly.</p>
 
-<div class="box">
-    <label>Your Decision</label>
-    <input type="text" id="decision" placeholder="Eg: Should I change my job?">
+  <label>What decision are you trying to make?</label><br><br>
+  <input type="text" id="decision" placeholder="e.g. Should I switch my job?" style="width:60%; padding:10px;"><br><br>
 
-    <label>Option A</label>
-    <input type="text" id="a">
+  <label>Option A</label><br>
+  <input type="text" id="optionA" placeholder="Option A"><br><br>
 
-    <label>Option B</label>
-    <input type="text" id="b">
+  <label>Option B</label><br>
+  <input type="text" id="optionB" placeholder="Option B"><br><br>
 
-    <button onclick="analyze()">Help Me Decide</button>
+  <button onclick="analyzeDecision()">Analyze</button>
 
-    <div id="result"></div>
+  <h3 id="result"></h3>
 
-    <a href="index.html">⬅ Back to Home</a>
-</div>
+  <br><br>
+  <a href="index.html">⬅ Back to Home</a>
 
-<script>
-function analyze() {
-    const decision = document.getElementById("decision").value;
-    const a = document.getElementById("a").value;
-    const b = document.getElementById("b").value;
-
-    if (!decision || !a || !b) {
-        document.getElementById("result").innerText =
-            "Please fill all fields.";
-        return;
-    }
-
-    document.getElementById("result").innerText =
-        "Based on clarity, think deeply about '" + a +
-        "' vs '" + b +
-        "'. If peace matters more, choose the option that feels lighter.";
-}
-</script>
-
+  <script src="decision.js"></script>
 </body>
 </html>
