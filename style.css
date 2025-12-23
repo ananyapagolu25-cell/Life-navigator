@@ -140,4 +140,16 @@ body.dark {
 .primary-btn:hover {
   opacity: 0.9;
 }
+.result-box {
+  margin-top: 20px;
+  padding: 16px;
+  background: #1e1e1e;
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
 
