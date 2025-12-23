@@ -29,3 +29,24 @@ function analyzeDecision() {
     <p>${randomThought}</p>
   `;
 }
+function makeDecision() {
+  const decision = document.getElementById("decisionInput").value;
+  const optionA = document.getElementById("optionA").value;
+  const optionB = document.getElementById("optionB").value;
+
+  if (!decision || !optionA || !optionB) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  // simple logic (can be improved later)
+  const randomScore = Math.floor(Math.random() * 100) + 1;
+  const chosen = randomScore > 50 ? optionA : optionB;
+
+  document.getElementById("resultBox").classList.remove("hidden");
+  document.getElementById("decisionSummary").innerText =
+    `Based on your inputs, "${chosen}" seems like the better choice right now.`;
+
+  document.getElementById("clarityScore").innerText =
+    `Clarity Score: ${randomScore}%`;
+}
