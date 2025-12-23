@@ -33,6 +33,28 @@
     </div>
 
     <script src="decision.js"></script>
+    <section id="decision-helper">
+  <h2>Decision Helper</h2>
+
+  <label>What decision are you trying to make?</label><br>
+  <input type="text" id="decision" placeholder="Eg: Should I change my job?" />
+
+  <br><br>
+
+  <label>Option A</label><br>
+  <input type="text" id="optionA" placeholder="Option A" />
+
+  <br><br>
+
+  <label>Option B</label><br>
+  <input type="text" id="optionB" placeholder="Option B" />
+
+  <br><br>
+
+  <button onclick="analyzeDecision()">Analyze Decision</button>
+
+  <h3 id="result"></h3>
+</section>
 
 </body>
 </html>

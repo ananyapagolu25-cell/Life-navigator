@@ -38,3 +38,16 @@ function saveJournal() {
     document.getElementById("journal-input").value = "";
     alert("Journal entry saved!");
 }
+function analyzeDecision() {
+  const decision = document.getElementById("decision").value;
+  const optionA = document.getElementById("optionA").value;
+  const optionB = document.getElementById("optionB").value;
+
+  if (!decision || !optionA || !optionB) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  document.getElementById("result").innerText =
+    "Think carefully about what aligns with your long-term goals. Trust your logic, not fear.";
+}
