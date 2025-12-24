@@ -1,38 +1,25 @@
-function analyzeDecision() {
-  const decision = document.getElementById("decision").value;
-  const optionA = document.getElementById("optionA").value;
-  const optionB = document.getElementById("optionB").value;
-  const priority = document.getElementById("priority").value;
-  const resultBox = document.getElementById("result");
+function makeDecision() {
+    const decision = document.getElementById("decision").value;
+    const optionA = document.getElementById("optionA").value;
+    const optionB = document.getElementById("optionB").value;
 
-  if (!decision || !optionA || !optionB) {
-    resultBox.innerHTML = "Please fill all fields.";
-    return;
-  }
+    if (!decision || !optionA || !optionB) {
+        alert("Please fill all fields");
+        return;
+    }
 
-  let recommendation = "";
-  let reason = "";
+    const scoreA = Math.floor(Math.random() * 100);
+    const scoreB = Math.floor(Math.random() * 100);
 
-  if (priority === "growth") {
-    recommendation = optionB;
-    reason = "Growth usually requires stepping out of comfort.";
-  } 
-  else if (priority === "peace") {
-    recommendation = optionA;
-    reason = "Peace comes from stability and familiarity.";
-  } 
-  else if (priority === "money") {
-    recommendation = optionB;
-    reason = "New opportunities often bring better financial outcomes.";
-  } 
-  else {
-    recommendation = optionA;
-    reason = "Balance is easier when disruption is minimal.";
-  }
+    let result = "";
 
-  resultBox.innerHTML = `
-    <h3>Recommended Choice</h3>
-    <p><strong>${recommendation}</strong></p>
-    <p class="reason">${reason}</p>
-  `;
+    if (scoreA > scoreB) {
+        result = `Go with "${optionA}". It aligns better with your situation.`;
+    } else if (scoreB > scoreA) {
+        result = `Choose "${optionB}". It feels like the stronger option.`;
+    } else {
+        result = `Both options are equal. Trust your gut.`;
+    }
+
+    document.getElementById("result").innerText = result;
 }
