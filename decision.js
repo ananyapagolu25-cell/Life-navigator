@@ -1,25 +1,26 @@
 function makeDecision() {
+    // Get user inputs
     const decision = document.getElementById("decision").value;
     const optionA = document.getElementById("optionA").value;
     const optionB = document.getElementById("optionB").value;
 
-    if (!decision || !optionA || !optionB) {
-        alert("Please fill all fields");
+    // Validation
+    if (decision === "" || optionA === "" || optionB === "") {
+        alert("Please fill all fields before deciding.");
         return;
     }
 
-    const scoreA = Math.floor(Math.random() * 100);
-    const scoreB = Math.floor(Math.random() * 100);
-
+    // Simple decision logic
     let result = "";
 
-    if (scoreA > scoreB) {
-        result = `Go with "${optionA}". It aligns better with your situation.`;
-    } else if (scoreB > scoreA) {
-        result = `Choose "${optionB}". It feels like the stronger option.`;
+    if (optionA.length > optionB.length) {
+        result = `Based on clarity, "${optionA}" seems better for your decision: "${decision}".`;
+    } else if (optionB.length > optionA.length) {
+        result = `Based on clarity, "${optionB}" seems better for your decision: "${decision}".`;
     } else {
-        result = `Both options are equal. Trust your gut.`;
+        result = `Both options seem equally strong. Trust your gut feeling.`;
     }
 
+    // Show result
     document.getElementById("result").innerText = result;
 }
