@@ -4,15 +4,17 @@
   <meta charset="UTF-8">
   <title>Decision Helper | Life Navigator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
   <style>
     body {
       background: #0f1117;
       color: #e5e7eb;
       font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
-    .container {
+    .decision-container {
       max-width: 700px;
       margin: 80px auto;
       padding: 30px;
@@ -23,19 +25,22 @@
       margin-bottom: 10px;
     }
 
-    p {
+    .subtitle {
       color: #9ca3af;
       margin-bottom: 30px;
     }
 
+    .card {
+      margin-bottom: 25px;
+    }
+
     label {
       display: block;
-      margin-top: 25px;
       margin-bottom: 8px;
       font-weight: 500;
     }
 
-    input {
+    input, select {
       width: 100%;
       padding: 14px;
       border-radius: 10px;
@@ -46,7 +51,7 @@
     }
 
     button {
-      margin-top: 35px;
+      margin-top: 30px;
       width: 100%;
       padding: 16px;
       font-size: 1.1rem;
@@ -57,7 +62,7 @@
       cursor: pointer;
     }
 
-    .result {
+    .result-box {
       margin-top: 40px;
       padding: 20px;
       border-radius: 12px;
@@ -66,30 +71,28 @@
     }
   </style>
 </head>
-<body class="dark">
+
+<body>
 
   <div class="decision-container">
     <h1>Decision Helper</h1>
     <p class="subtitle">Think clearly. Decide calmly.</p>
 
-    <!-- Step 1 -->
     <div class="card">
       <label>Your decision</label>
-      <input type="text" id="decision" placeholder="e.g. Should I change my job?">
+      <input type="text" id="decision" placeholder="Should I change my job?">
     </div>
 
-    <!-- Step 2 -->
     <div class="card">
       <label>Option A</label>
-      <input type="text" id="optionA" placeholder="e.g. Stay at current job">
+      <input type="text" id="optionA" placeholder="Stay at current job">
     </div>
 
     <div class="card">
       <label>Option B</label>
-      <input type="text" id="optionB" placeholder="e.g. Switch to new job">
+      <input type="text" id="optionB" placeholder="Switch to new job">
     </div>
 
-    <!-- Step 3 -->
     <div class="card">
       <label>What matters more?</label>
       <select id="priority">
@@ -100,9 +103,8 @@
       </select>
     </div>
 
-    <button onclick="makeDecision()">Decide</button>
+    <button onclick="makeDecision()">Help me decide</button>
 
-    <!-- Result -->
     <div id="result" class="result-box"></div>
   </div>
 
